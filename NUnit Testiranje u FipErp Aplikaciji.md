@@ -282,9 +282,9 @@ public void Setup()
 }
 ```
 
-Setup metoda stvara mock objekte za sve dependecy kontrolera. Zanimljivo je primijetiti kako testovi simuliraju prijavljenog korisnika:
+Setup metoda stvara mock objekte za sve dependecy kontrolera. Kako testovi simuliraju prijavljenog korisnika:
 1. Stvara se testni korisnik `_testKorisnik`
-2. Koristi se refleksija (`typeof(CurrentHttpRequestContext).GetProperty...`) da se postavi svojstvo prijavljenog korisnika na mock objektu
+2. Koristi se refleksija (`typeof(CurrentHttpRequestContext).GetProperty...`) da se postavi prop prijavljenog korisnika na mock objektu
 3. Ovime osiguravamo da kontroler ima pristup kontekstu prijavljenog korisnika kao u stvarnoj aplikaciji
 
 ### Čišćenje resursa (TearDown i IDisposable)
